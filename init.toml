@@ -24,8 +24,8 @@
     enable_guicolors = true
     # 设置状态栏上分割符号形状，如果字体安装失败，可以将值设为 "nil" 以
     # 禁用分割符号，默认为箭头 "arrow"
-    statusline_separator = "nil"
-    statusline_separator = "bar"
+#statusline_separator = "nil"
+#statusline_separator = "bar"
     # 设置顶部标签列表序号类型，有以下五种类型，分别是 0 - 4
     # 0: 1 ➛ ➊ 
     # 1: 1 ➛ ➀
@@ -45,6 +45,20 @@
     autocomplete_method = "coc"
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
+
+    automatic_update = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    filetree_direction = 'right'
+    enable_vimfiler_gitstatus = true
+    relativenumber = false
+    enable_cursorline = true
+    enable_filetype_icon = true
+    enable_tabline_filetype_icon = true
 
 # ----------------- SpaceVim 添加的各种 layers ---------------------------------
 
@@ -73,6 +87,9 @@
   name = "lang#markdown"
 
 [[layers]]
+  name = "lang#javascript"
+
+[[layers]]
   name = "lang#latex"
 
 # ----------------- 添加的插件 -------------------------------------------------
@@ -83,10 +100,11 @@
   merged = 0
 
 # coc.nvim 核心配置，不要删除
-[[custom_plugins]]
-  name = 'neoclide/coc.nvim'
-  merge = 0
-  build =  'yarn install --frozen-lockfile'
+#[[custom_plugins]]
+  #name = 'neoclide/coc.nvim'
+  #merge = 0
+  #rev = 'release'
+  #build =  'yarn install --frozen-lockfile'
 
 # 主要用于快速搜索 文件, buffer 和 函数
 [[custom_plugins]]
@@ -151,3 +169,7 @@
 
 [[custom_plugins]]
   name = 'kenn7/vim-arsync'
+
+[[custom_plugins]]
+  name = 'jackguo380/vim-lsp-cxx-highlight'
+
